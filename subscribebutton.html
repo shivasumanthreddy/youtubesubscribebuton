@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>subscribe-button</title>
+    </head>
+    <body>
+      <style>
+        body {
+            font font-family: Arial;
+        }
+        .subscribe-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding-top:10px; 
+        padding-bottom: 10px;
+        padding-left:15px;
+        padding-right:15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-bottom: 30px;
+        }
+        .is-subscribed{
+          background-color: rgb(240, 240, 240);
+          color: black;
+        }
+      </style>
+        <p> <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; color: red; background-color: azure;">youtube  subscribe button </h1></p>
+        <button onclick="
+      subscribe();
+        "
+        class="js-subscribe-button subscribe-button">
+            subscribe</button>
+        <script>
+          function subscribe(){
+            const buttonelement=document.querySelector('.js-subscribe-button');
+
+          if (buttonelement.innerText==='subscribe')
+         {
+
+             buttonelement.innerHTML='subscribed';
+             buttonelement.classList.add('is-subscribed');
+         }
+          else {
+             buttonelement.innerHTML='subscribe';
+             buttonelement.classList.remove('is-subscribed');
+        }
+          }
+            </script>
+    </body>
+</html>
